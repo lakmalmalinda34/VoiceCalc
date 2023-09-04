@@ -65,7 +65,6 @@ def process_voice():
         text = recognizer.recognize_google(audio)
         
         result = evaluate_math_expression(text)
-        return jsonify({'bla': result})
         if result is not None:
             response_text = "The result of the calculation is: " + str(result)
         else:
